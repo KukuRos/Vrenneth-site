@@ -3,13 +3,13 @@
 
 /* ========== VARIABLES CSS ========== */
 :root{
-    --header-height:3.5rem;
+    --header-height: 3.5rem;
 
 
 /* ========== Colors ========== */
 /* Color mode HSL(Hue, saturation, lightness */
---first-color: hsl(36, 72%, 48%);
---firts-color-alt: hsl(36, 72%, 44%);
+--first-color: hsl(115, 84%, 38%);
+--firts-color-alt: hsl(115, 75%, 34%);
 --black-color: hsl(206, 12%, 12%);
 --card-color: hsl(0, 0%, 90%);
 --title-color: hsl(206, 12%, 12%);
@@ -51,8 +51,9 @@
 /* ========== BASE ========== */
 *{
     box-sizing: border-box;
-    margin: 0;
     padding: 0;
+    margin: 0;
+    
 }
 
 html{
@@ -97,7 +98,7 @@ button{
 
 /* ========== REUSABLE CSS CLASSES ========== */
 .container{
-    min-width: 1024px;
+    max-width: 1024px;
     margin-left: 1.5rem;
     margin-right: 1.5rem;
 }
@@ -131,7 +132,7 @@ button{
 /* ========== HEADER & NAV ========== */
 .header{
     width: 100%;
-    background: #000;
+    background: transparent;
     position: fixed;
     top: 0;
     left: 0;
@@ -172,7 +173,7 @@ button{
         position: fixed;
         background-color: var(--black-color);
         top: 0;
-        right: 0;
+        right: -100%;
         width: 100%;
         height: 100%;
         transition: .3s;
@@ -191,17 +192,212 @@ button{
     text-transform: uppercase;
     color: var(--text-color-light);
     font-size: var(--h2-font-size);
+    transition: .3s;
 }
+
+.nav__link:hover{
+    color: #fff;
+}
+
+.nav__close{
+    font-size: 2rem;
+    color: #fff;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+}
+
 /* Show menu */
+.show-menu{
+    right: 0;
+
+}
 
 /* Change background header */
+.scroll-header{
+    background-color:var(--body-color);
+    box-shadow: 0 1px 4px hsla(0, 4%, 15%, .1);
+}
+
+.scroll-header .nav__logo,
+.scroll-header .nav__toggle{
+    color: var(--title-color);
+}
+
+.scroll-header .nav__logo-img{
+    mix-blend-mode: difference;
+}
 
 /* Active link */
 
 
 
 /* ========== HOME ========== */
+.home{
+    gap: 0;
+}
+
+.home__container{
+    padding: 7rem 0 2.5rem;
+    background: linear-gradient(160deg, hsla(206, 5%, 24%) -4%, hsla(206, 12%, 12%, 1)46%);
+}
+
+.home__content{
+    position: relative;
+}
+
+.home__title,
+.home__data-title{
+    color: #fff;
+}
+
+.home__title{
+    font-size: var(--biggest-font-size);
+    margin-bottom: 1.5rem;
+}
+
+.home__title span{
+    color: var(--first-color);
+}
+
+.home__description{
+    margin-bottom: 2rem;
+}
+
+.home__data{
+    border-top: 1px solid var(--text-color);
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1.5rem;
+}
+
+.home__data-number{
+    color: var(--first-color);
+    font-size: var(--h1-font-size);
+    margin-bottom: 1.5rem;
+}
+
+.home__data-title{
+    font-size: var(--h3-font-size);
+    margin-bottom: .5rem;
+}
+
+.home__scroll{
+    position: absolute;
+    width: 100px;
+    bottom: -7rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    animation: scroll 3s infinite;
+}
+
 
 /* Scroll image animate */
+@keyframes scroll{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-.5rem);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+
+
 
 /* ========== BUTTON ========== */
+.button{
+    display: inline-block;
+    background-color:var(--black-color);
+    color: #fff;
+    padding: 1rem 1.75rem;
+    border-radius: .25rem;
+    font-size: var(--normal-font-size);
+    text-transform: uppercase;
+}
+
+/*=============== SPECIALTY ===============*/
+.specialty__button{
+    margin-left: 1.25rem;
+}
+
+.specialty__category{
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: 200px;
+    justify-content: center;
+    row-gap: 2.5rem;
+}
+
+.specialty__img{
+    width: 60px;
+    margin-bottom: 1rem;
+    transition: .4s;
+}
+
+.specialty__group{
+    text-align: center;
+}
+
+.specialty__title{
+    font-size: var(--h2-font-size);
+    margin-bottom: .25rem;
+}
+
+.specialty__group:hover .specialty__img{
+    transform: translateY(-.25rem);
+}
+
+
+
+/*=============== PRODUCTS ===============*/
+
+
+/* Active link products */
+
+
+/*=============== QUALITY ===============*/
+
+
+/*=============== LOGOS ===============*/
+
+
+/*=============== BLOG ===============*/
+
+
+/*=============== FOOTER ===============*/
+
+
+/*=============== SCROLL BAR ===============*/
+
+
+/*=============== SCROLL UP ===============*/
+
+
+/* Show Scroll Up*/
+
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+
+
+/* For medium devices */
+
+
+/* For large devices */
+
+
+/* Alternative code, for larger screens */
+
+
+/*=============== LOAD ===============*/
+
+
+/* The size may vary depending 
+on the image of the gif */
