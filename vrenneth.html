@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- =========== FAVICON =========== -->
-    <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/img/faviconV.png" type="image/x-icon">
 
     <!-- =========== BOXICONS =========== -->
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
@@ -18,7 +18,9 @@
 </head>
 <body>
     <!-- =========== LOADER =========== -->
-
+    <div class="load" id="load">
+        <img src="./assets/img/loaddice2.gif" alt="" class="load__gif">
+    </div>
     <!-- =========== HEADER =========== -->
     <header class="header" id="header">
         <nav class="nav container">
@@ -29,7 +31,7 @@
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
                     <li class="nav__item">
-                        <a href="#home" class="nav__link">Inicio</a>
+                        <a href="#home" class="nav__link active-link">Inicio</a>
                     </li>
                     <li class="nav__item">
                         <a href="#products" class="nav__link">Detalles</a>
@@ -54,7 +56,6 @@
         </nav>
     </header>
 
-
     <!-- =========== MAIN =========== -->
     <main>
         <!--==================== HOME ====================-->
@@ -65,7 +66,7 @@
                             Espíritu</i><span>.</span>
                         </h1>
                         <p class="home__description">
-                            Los habitantes de las montañas
+                            elegantes y altos, precisos y osados.
                         </p>
                         <div class="home__data">
                             <div class="home__data-group">
@@ -85,7 +86,7 @@
                             </div>
                         </div>
 
-                        <a href="specialty">
+                        <a href="#specialty">
                             <img src="./assets/img/scroll.png" alt="" class="home__scroll">
                         </a>
                     </div>
@@ -96,9 +97,9 @@
         <!--==================== ESPECIALTY ====================-->
         <div class="specialty section container" id="specialty">
             <div class="specialty__container">
-                <div class="speciality__box">
+                <div class="specialty__box">
                     <h2 class="section__title">
-                        Specialty coffees that make you happy and cheer you up!
+                        Conoce las características de este clan!
                     </h2>
                     <div>
                         <a href="#" class="button specialty__button">See more</a>
@@ -106,7 +107,7 @@
                 </div>
 
                 <div class="specialty__category">
-                    <div class="specialty__group">
+                    <div class="specialty__group specialty__line">
                         <img src="./assets/img/especiality1.png" alt="" class="specialty__img">
 
                         <h3 class="specialty__title">Nombre</h3>
@@ -115,7 +116,7 @@
                         </p>
                     </div>
 
-                    <div class="specialty__group">
+                    <div class="specialty__group specialty__line">
                         <img src="./assets/img/especiality2.png" alt="" class="specialty__img">
 
                         <h3 class="specialty__title">Nombre</h3>
@@ -138,34 +139,389 @@
 
         <!--==================== PRODUCTS ====================-->
         <section class="products section" id="products">
-            
+            <div class="product__container container">
+                <h2 class="section__title">
+                    Descubre sus tierras, personajes y magia
+                </h2>
+
+                <ul class="products__filters">
+                    <li class="products__item products__line active-product" data-filter=".lugares">
+                        <h3 class="products__title">Lugares</h3>
+                        <span class="products__stock">5 zonas</span>
+                    </li>
+
+                    <li class="products__item products__line" data-filter=".personajes">
+                        <h3 class="products__title">Personajes</h3>
+                        <span class="products__stock">5 personajes</span>
+                    </li>
+
+                    <li class="products__item" data-filter=".magias">
+                        <h3 class="products__title">Magias</h3>
+                        <span class="products__stock">4 elementos</span>
+                    </li>
+                </ul>
+                <div class="products__content grid">
+                    <!--============== Lugares ==============-->
+                    <article class="products__card lugares">
+                        <div class="products__shape">
+                            <img src="assets/img/delicacies1.png" alt="" class="products__img">
+                        </div>
+
+                        <div class="products__data">
+                            <h2 class="products__price">Puerto del amanecer</h2>
+                            <h3 class="products__name"></h3>
+
+                            <button class="button products__button">
+                                <i class='bx bx-link-external' ></i>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="products__card lugares">
+                        <div class="products__shape">
+                            <img src="assets/img/delicacies2.png" alt="" class="products__img">
+                        </div>
+
+                        <div class="products__data">
+                            <h2 class="products__price">Elethar</h2>
+                            <h3 class="products__name">Capital</h3>
+
+                            <button class="button products__button">
+                                <i class='bx bx-link-external' ></i>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="products__card lugares">
+                        <div class="products__shape">
+                            <img src="assets/img/delicacies3.png" alt="" class="products__img">
+                        </div>
+
+                        <div class="products__data">
+                            <h2 class="products__price">Villair</h2>
+                            <h3 class="products__name"></h3>
+
+                            <button class="button products__button">
+                                <i class='bx bx-link-external' ></i>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="products__card lugares">
+                        <div class="products__shape">
+                            <img src="assets/img/delicacies1.png" alt="" class="products__img">
+                        </div>
+
+                        <div class="products__data">
+                            <h2 class="products__price">Ossnia</h2>
+                            <h3 class="products__name"></h3>
+
+                            <button class="button products__button">
+                                <i class='bx bx-link-external' ></i>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="products__card lugares">
+                        <div class="products__shape">
+                            <img src="assets/img/delicacies2.png" alt="" class="products__img">
+                        </div>
+
+                        <div class="products__data">
+                            <h2 class="products__price">Iliad</h2>
+                            <h3 class="products__name"></h3>
+
+                            <button class="button products__button">
+                                <i class='bx bx-link-external' ></i>
+                            </button>
+                        </div>
+                    </article>
+                    <!--============== Personajes ==============-->
+                    <article class="products__card personajes">
+                        <div class="products__shape">
+                            <img src="assets/img/Alumi.jpg" alt="" class="products__img">
+                        </div>
+
+                        <div class="products__data">
+                            <h2 class="products__price">Alumi</h2>
+                            <h3 class="products__name">Support</h3>
+
+                            <button class="button products__button">
+                                <i class='bx bx-link-external' ></i>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="products__card personajes">
+                        <div class="products__shape">
+                            <img src="assets/img/Jade.jpg" alt="" class="products__img">
+                        </div>
+
+                        <div class="products__data">
+                            <h2 class="products__price">Jade</h2>
+                            <h3 class="products__name">Warrior</h3>
+
+                            <button class="button products__button">
+                                <i class='bx bx-link-external' ></i>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="products__card personajes">
+                        <div class="products__shape">
+                            <img src="assets/img/Portia.jpg" alt="" class="products__img">
+                        </div>
+
+                        <div class="products__data">
+                            <h2 class="products__price">Portia</h2>
+                            <h3 class="products__name">Support</h3>
+
+                            <button class="button products__button">
+                                <i class='bx bx-link-external' ></i>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="products__card personajes">
+                        <div class="products__shape">
+                            <img src="assets/img/Ciel.jpg" alt="" class="products__img">
+                        </div>
+
+                        <div class="products__data">
+                            <h2 class="products__price">Ciel</h2>
+                            <h3 class="products__name">Mage</h3>
+
+                            <button class="button products__button">
+                                <i class='bx bx-link-external' ></i>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="products__card personajes">
+                        <div class="products__shape">
+                            <img src="assets/img/Ango.png" alt="" class="products__img">
+                        </div>
+
+                        <div class="products__data">
+                            <h2 class="products__price">Ango</h2>
+                            <h3 class="products__name">Warrior</h3>
+
+                            <button class="button products__button">
+                                <i class='bx bx-link-external' ></i>
+                            </button>
+                        </div>
+                    </article>
+                    <!--============== Magias ==============-->
+                    <article class="products__card magias">
+                        <div class="products__shape">
+                            <img src="assets/img/cake1.png" alt="" class="products__img">
+                        </div>
+
+                        <div class="products__data">
+                            <h2 class="products__price">Viento</h2>
+                            <h3 class="products__name">Magia primaria</h3>
+
+                            <button class="button products__button">
+                                <i class='bx bx-link-external' ></i>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="products__card magias">
+                        <div class="products__shape">
+                            <img src="assets/img/cake2.png" alt="" class="products__img">
+                        </div>
+
+                        <div class="products__data">
+                            <h2 class="products__price">Luz</h2>
+                            <h3 class="products__name">Linea de sangre pura</h3>
+
+                            <button class="button products__button">
+                                <i class='bx bx-link-external' ></i>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="products__card magias">
+                        <div class="products__shape">
+                            <img src="assets/img/cake3.png" alt="" class="products__img">
+                        </div>
+
+                        <div class="products__data">
+                            <h2 class="products__price">Electricidad</h2>
+                            <h3 class="products__name">1/2 de sangre Arameddan</h3>
+
+                            <button class="button products__button">
+                                <i class='bx bx-link-external' ></i>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="products__card magias">
+                        <div class="products__shape">
+                            <img src="assets/img/cake4.png" alt="" class="products__img">
+                        </div>
+
+                        <div class="products__data">
+                            <h2 class="products__price">Hielo</h2>
+                            <h3 class="products__name">1/2 de sangre Tharagon</h3>
+
+                            <button class="button products__button">
+                                <i class='bx bx-link-external' ></i>
+                            </button>
+                        </div>
+                    </article>
+                </div>
+            </div>
         </section>
 
         <!--==================== QUALITY ====================-->
         <section class="quality section" id="premium">
-            
+            <div class="quality__container container">
+                <h2 class="section__title">
+                    Un vistazo al clan Vrenneth
+                </h2>
+
+                <div class="quality__content grid">
+                    <div class="quality__images">
+                        <img src="./assets/img/quality1.png" alt="" class="quality__img-big">
+                        <img src="./assets/img/quality2.png" alt="" class="quality__img-small">
+                    </div>
+
+                    <div class="quality__data">
+                        <h1 class="quality__title">Solo uno</h1>
+                        
+                        <p class="quality__description">
+                            Los vrennethses son un pueblo espiritual. Si bien no tienen una religión unificada, la nación cree en la existencia de un espíritu humano que se eleva sobre pecados y deseos egoístas. Una persona capaz de liderar la nación con completa devoción. Esta persona es llamada "Kaith'eth" (literalmente "el que vuela). Reducido a "Kaith" a través del uso moderno, se cree que este individuo renace en una nueva persona tras cada muerte. <br /><br />
+
+                            Los monjes de la Orden del Viento son los encargados de gobernar en su ausencia, pero sus decisiones suelen dedicarse a mantener lo que ya fue pactado. Mientras tanto, la Orden busca, probando a los niños de toda la nación en busca de uno que demuestre las características y conocimientos de la última encarnación. <br />
+
+                            Estas pruebas pueden ir desde identificar juguetes específicos entre miles a medir las reacciones del infante ante hechos presenciados por el último Kaith. Una vez consideran han dado con la reencarnación, el niño es entregado a La Orden y criado para gobernar Vrenneth desde una temprana edad.<br /><br />
+
+                            Este ritual tiene opiniones encontradas entre las otras naciones y es muchas veces considerado una pantomima que permite a la Orden del Viento gobernar en secreto. No obstante, algunos gobernantes han afirmado encontrar inquietantes sus conversaciones con los Kaith, quienes parecen recordar conversaciones mantenidas mucho antes de su nacimiento.<br /><br />
+
+                            El Kaith actual tiene 17 años de edad.
+                        </p>
+
+                        <div class="quality__buttons">
+                            <button class="button">
+                                Saber mas
+                            </button>
+
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!--==================== LOGOS ====================-->
         <section class="logo section">
-            
+            <div class="logo__container container grid">
+                <img src="./assets/img/logocoffee1.png" alt="" class="logo__img">
+                <img src="./assets/img/logocoffee2.png" alt="" class="logo__img">
+                <img src="./assets/img/logocoffee3.png" alt="" class="logo__img">
+                <img src="./assets/img/logocoffee4.png" alt="" class="logo__img">
+                <img src="./assets/img/logocoffee5.png" alt="" class="logo__img">
+            </div>
         </section>
 
         <!--==================== BLOG ====================-->
         <section class="blog section" id="blog">
-            
+            <div class="blog__container container">
+                <h2 class="section__title">
+                    Nuestras misiones y trasfondos de personaje
+                </h2>
+
+                <div class="blog__content grid">
+                    <article class="blog__card">
+                        <div class="blog__image">
+                            <img src="./assets/img/blog1.png" alt="" class="blog__img">
+                            <a href="" class="blog__button">
+                                <i class='bx bx-chevron-right' ></i>
+                            </a>
+                        </div>
+
+                        <div class="blog__data">
+                            <h2 class="blog__title">
+                                Misiones
+                            </h2>
+                            <p class="blog__description">
+                                Misiones en tierras verdes
+                            </p>
+
+                            <div class="blog__footer">
+                                <div class="blog__reaction">
+                                    <i class='bx bx-comment' ></i>
+                                    <span>176</span>
+                                </div>
+
+                                <div class="blog__reaction">
+                                    <i class='bx bx-show' ></i>
+                                    <span>5.230</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="blog__card">
+                        <div class="blog__image">
+                            <img src="./assets/img/blog2.png" alt="" class="blog__img">
+                            <a href="" class="blog__button">
+                                <i class='bx bx-chevron-right' ></i>
+                            </a>
+                        </div>
+
+                        <div class="blog__data">
+                            <h2 class="blog__title">
+                                Trasfondos
+                            </h2>
+                            <p class="blog__description">
+                                Fichas de personaje activos del clan Vrenneth
+                            </p>
+
+                            <div class="blog__footer">
+                                <div class="blog__reaction">
+                                    <i class='bx bx-comment' ></i>
+                                    <span>20</span>
+                                </div>
+
+                                <div class="blog__reaction">
+                                    <i class='bx bx-show' ></i>
+                                    <span>3.905</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
         </section>
     </main>
 
     <!-- =========== FOOTER =========== -->
     <footer class="footer">
+        <div class="footer__container container">
+            <h1 class="footer__title">Vrenneth.</h1>
 
+            <div class="footer__content grid">
+                <div class="footer__data">
+                    <p class="footer__description">
+                        
+                    </p>
+                </div>
+                <div class="footer__data">
+                    
+                </div>
+            </div>
+        </div>
     </footer>
 
     <!-- =========== SCROLL UP =========== -->
-
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class='bx bx-chevron-up' ></i>
+    </a>
     <!-- =========== MIXITUP FILTER =========== -->
-    <script src=""></script>
+    <script src="./assets/js/mixitup.min.js"></script>
 
     <!-- =========== MAIN JS =========== -->
     <script src="./assets/js/main.js"></script>
