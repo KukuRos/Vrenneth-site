@@ -324,12 +324,12 @@ button{
     text-transform: uppercase;
 }
 
-/*=============== SPECIALTY ===============*/
-.specialty__button{
+/*=============== rasgos ===============*/
+.rasgos__button{
     margin-left: 1.25rem;
 }
 
-.specialty__category{
+.rasgos__category{
     margin-top: 4rem;
     display: grid;
     grid-template-columns: 200px;
@@ -337,40 +337,40 @@ button{
     row-gap: 2.5rem;
 }
 
-.specialty__img{
+.rasgos__img{
     width: 60px;
     margin-bottom: 1rem;
     transition: .4s;
 }
 
-.specialty__group{
+.rasgos__group{
     text-align: center;
 }
 
-.specialty__title{
+.rasgos__title{
     font-size: var(--h2-font-size);
     margin-bottom: .25rem;
 }
 
-.specialty__group:hover .specialty__img{
+.rasgos__group:hover .rasgos__img{
     transform: translateY(-.25rem);
 }
 
 
 
-/*=============== PRODUCTS ===============*/
-.products__filters{
+/*=============== details ===============*/
+.details__filters{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2.5rem 2rem;
     margin-bottom: 3.5rem;
 }
 
-.products__line{
+.details__line{
     position: relative;
 }
 
-.products__line::before{
+.details__line::before{
     content: '';
     position: absolute;
     width: 1px;
@@ -382,61 +382,61 @@ button{
     margin: auto 0;
 }
 
-.products__item{
+.details__item{
     cursor: pointer;
 }
 
-.products__title{
+.details__title{
     font-size: var(--h3-font-size);
     color: var(--text-color);
     margin-bottom: .5rem;
 }
 
-.products__stock{
+.details__stock{
     font-size: var(--small-font-size);
 }
 
-.products__content{
+.details__content{
     grid-template-columns: 200px;
     justify-content: center;
 }
 
-.products__card{
+.details__card{
     background-color:var(--container-color);
     border-radius: .5rem;
 }
 
-.products__shape{
+.details__shape{
     background-color: var(--card-color);
     border-radius: .5rem .5rem 0 0;
     text-align: center;
     padding: .25rem 0;
 }
 
-.products__shape img{
+.details__shape img{
     border-radius: 50%;
     
 }
 
-.products__img{
+.details__img{
     width: 150px;
     transition: .4s;
 }
 
-.products__data{
+.details__data{
     padding: 1rem 0 1.25rem 1rem;
     position: relative;
 }
 
-.products__price{
+.details__price{
     font-size: var(--h2-font-size);
 }
 
-.products__name{
+.details__name{
     font-size: var(--normal-font-size);
 }
 
-.products__button{
+.details__button{
     border-radius: 50%;
     padding: .625rem;
     display: inline-flex;
@@ -447,41 +447,41 @@ button{
     box-shadow: 0 4px 12px hsla(206, 4%, 4%, .2);
 }
 
-.products__card:hover .products__img{
+.details__card:hover .details__img{
     transform: translateY(-.25rem);
 }
 
 
 
-/* Active link products */
-.active-product .products__title{
+/* Active link details */
+.active-detail .details__title{
     color: var(--title-color);
 }
 
-/*=============== QUALITY ===============*/
-.quality{
+/*=============== about ===============*/
+.about{
     background-color: #fff;
 }
 
-.quality__content{
+.about__content{
     row-gap: 2.5rem;
 }
 
-.quality__images{
+.about__images{
     position: relative;
     justify-self: center;
 }
 
-.quality__img-big,
-.quality__img-small{
+.about__img-big,
+.about__img-small{
     border-radius: .5rem;
 }
 
-.quality__img-big{
+.about__img-big{
     width: 280px;
 }
 
-.quality__img-small{
+.about__img-small{
     width: 100px;
     position: absolute;
     top: 0;
@@ -490,36 +490,37 @@ button{
     transform: translateX(-5rem);
 }
 
-.quality__title,
-.quality__price{
+.about__title,
+.about__price{
     font-size: var(--h1-font-size);
+    color: var(--firts-color-alt);
 }
 
-.quality__title{
+.about__title{
     margin-bottom: .75rem;
 }
 
-.quality__price{
+.about__price{
     margin-bottom: .25rem;
 }
 
-.quality__special{
+.about__special{
     display: block;
     font-size: var(--small-font-size);
     margin-bottom: .75rem;
 }
 
-.quality__description{
+.about__description{
     margin-bottom: 2.5rem;
 }
 
-.quality__buttons{
+.about__buttons{
     display: flex;
     align-items: center;
     column-gap: 2rem;
 }
 
-.quality__button{
+.about__button{
     font-size: var(--normal-font-size);
     text-transform: uppercase;
     color: var(--title-color);
@@ -528,12 +529,12 @@ button{
     column-gap: .75rem;
 }
 
-.quality__buttons i{
+.about__buttons i{
     font-size: 1.25rem;
     transition: .4s;
 }
 
-.quality__buttons:hover i{
+.about__buttons:hover i{
     transform: translateX(.25rem);
 }
 /*=============== LOGOS ===============*/
@@ -689,11 +690,11 @@ button{
         margin-right: 1rem;
     }
 
-    .quality__img-small{
+    .about__img-small{
         transform: translateX(-6rem);
     }
 
-    .quality__buttons{
+    .about__buttons{
         flex-direction: column;
         row-gap: 1rem;
     }
@@ -702,12 +703,12 @@ button{
 
 /* For medium devices */
 @media screen and (min-width: 576px){
-    .specialty__category{
+    .rasgos__category{
         grid-template-columns: repeat(2, 200px);
         column-gap: 3rem;
     }
 
-    .products__content{
+    .details__content{
         grid-template-columns: repeat(2, 200px);
         padding-bottom: 3rem;
     }
@@ -736,12 +737,18 @@ button{
         padding-top: 0;
         flex-direction: row;
         column-gap: 4rem;
+        
+    }
+
+    .nav__item{
+        
     }
 
     .nav__link{
         position: relative;
         font-size: var(--normal-font-size);
         text-transform: initial;
+        color: var(--black-color);
     }
 
     .nav__link::after{
@@ -783,11 +790,11 @@ button{
         margin: auto;
     }
 
-    .products__filters{
+    .details__filters{
         grid-template-columns: repeat(3, 200px);
     }
 
-    .quality__content,
+    .about__content,
     .footer__content{
         grid-template-columns: repeat(2, 1fr);
         align-items: center;
@@ -820,25 +827,25 @@ button{
         top: 12px;
     }
 
-    .specialty__box{
+    .rasgos__box{
         display: grid;
         grid-template-columns: 2fr .5fr;
     }
 
-    .specialty__group{
+    .rasgos__group{
         text-align: initial;
     }
 
-    .specialty__category{
+    .rasgos__category{
         grid-template-columns: repeat(3, 250px);
         column-gap: 8rem;
     }
 
-    .specialty__line{
+    .rasgos__line{
         position: relative;
     }
 
-    .specialty__line::before{
+    .rasgos__line::before{
         content: '';
         width: 1px;
         height: 120px;
@@ -850,71 +857,71 @@ button{
         margin: auto 0;
     }
 
-    .specialty__img{
+    .rasgos__img{
         width: 80px;
         margin-bottom: 1.5rem;
     }
 
-    .products__filters{
+    .details__filters{
         margin: 4rem 0 5.5rem;
         column-gap: 4rem;
     }
 
-    .products__content{
+    .details__content{
         grid-template-columns: repeat(3, 262px);
         justify-content: initial;
         column-gap: 5rem;
     }
 
-    .products__card{
+    .details__card{
         border-radius: .75rem;
     }
 
-    .products__img{
+    .details__img{
         width: 190px;
     }
 
-    .products__shape{
+    .details__shape{
         padding: 2rem 0;
         border-radius: .75rem .75rem 0 0;
     }
 
-    .products__data{
+    .details__data{
         padding: 1rem 0 1.5rem 1.5rem;
     }
 
-    .products__name{
+    .details__name{
         font-size: var(--h3-font-size);
     }
 
-    .products__button{
+    .details__button{
         font-size: 1.5rem;
         padding: .75rem;
         right: 1.5rem;
         top: -1.5rem;
     }
 
-    .quality__content{
+    .about__content{
         column-gap: 5rem;
     }
     
-    .quality__images{
+    .about__images{
         margin-top: 1rem;
     }
 
-    .quality__img-big{
+    .about__img-big{
         width: 500px;
     }
 
-    .quality__img-small{
+    .about__img-small{
         width: 153px;
         transform: translateX(-7rem);
     }
-    .quality__title{
+    .about__title{
         margin-bottom: 1.5rem;
     }
 
-    .quality__special{
+    .about__special{
         margin-bottom: 1rem;
     }
 
@@ -953,7 +960,7 @@ button{
         
     }
     .home__data{
-        padding-top: 3rem;
+        padding-top: 4rem;
     }
 
     .home__title{
@@ -971,7 +978,7 @@ button{
 
 
 /* Alternative code, for larger screens */
-@media screen and (min-width: 1700px){
+@media screen and (min-width: 1515px){
     .home{
         max-width: 1400px;
         margin-left: auto;

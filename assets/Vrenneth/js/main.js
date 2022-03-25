@@ -46,28 +46,28 @@ function scrollHeader(){
 }
 window.addEventListener('scroll', scrollHeader)
 
-/*=============== MIXITUP FILTER PRODUCTS ===============*/
-let mixerProducts = mixitup('.products__content', {
+/*=============== MIXITUP FILTER DETAILS ===============*/
+let mixerDetails = mixitup('.details__content', {
     selectors: {
-        target: '.products__card'
+        target: '.details__card'
     },
     animation:{
         duration:300
     }
 });
 
-/* Default filter products */ 
-mixerProducts.filter('.lugares')
+/* Default filter details */ 
+mixerDetails.filter('.lugares')
 
-/* Link active products */ 
-const linkProducts = document.querySelectorAll('.products__items')
+/* Link active details */ 
+const linkDetails = document.querySelectorAll('.details__items')
 
-function activeProducts() {
-    linkProducts.forEach(l=> l.classList.remove('active-product'))
-    this.classList.add('active-product')
+function activeDetails() {
+    linkDetails.forEach(l=> l.classList.remove('active-detail'))
+    this.classList.add('active-detail')
 }
 
-linkProducts.forEach(l=> l.addEventListener('click', activeProducts))
+linkDetails.forEach(l=> l.addEventListener('click', activeDetails))
 
 /*=============== SHOW SCROLL UP ===============*/ 
 function scrollUp(){
