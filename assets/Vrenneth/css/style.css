@@ -451,7 +451,18 @@ button{
     transform: translateY(-.25rem);
 }
 
-
+.details__button a:link {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+    height: 24px;
+  }
+  
+.details__button a:visited {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+  } 
 
 /* Active link details */
 .active-detail .details__title{
@@ -518,6 +529,19 @@ button{
     display: flex;
     align-items: center;
     column-gap: 2rem;
+}
+
+.about__button a:link {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+
+}
+
+.about__button a:visited {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
 }
 
 .about__button{
